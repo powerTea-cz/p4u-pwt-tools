@@ -1,12 +1,15 @@
 // ==UserScript==
-// @name         +4U Tools
+// @name         p4u-pwt-tools
+// @description  Tools for +4U made by powerTea
+// @version      1.0.0
+// @namespace    https://uuos9.plus4u.net/
 // @homepage     https://github.com/powerTea-cz/p4u-pwt-tools
-// @version      0.1
-// @description  Tools and shortcuts for +4U
-// @author       You
+// @author       powerTea-cz
+// @license      MIT
+// @require      https://code.jquery.com/jquery-3.2.1.min.js
+// @grant        GM_addStyle
 // @match        https://plus4u.net/ues/*
-// @grant        none
-// @require      http://code.jquery.com/jquery-2.1.4.min.js
+// @run-at       document-idle
 // ==/UserScript==
 
 /* globals $ */
