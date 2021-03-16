@@ -14,6 +14,35 @@
 
 /* globals $ */
 
+GM_addStyle(`
+div.pwt-container {
+width: 80px;
+min-height: 72px;
+text-align: center;
+position: absolute;
+left: 8px;
+top: 264px;
+border: solid 2px black;
+border-radius: 2px;
+background: white;
+}
+
+div.pwt-container > span {
+display: block;
+margin-bottom: 8px;
+}
+
+div.pwt-container > button {
+width: 64px;
+color: white;
+background-color: #2196f3;
+border-color: #2196f3;
+border-radius: 4px;
+border-style: solid;
+}
+
+`);
+
 const SWF_UNIT_NAME = "D9";
 
 (function () {
@@ -25,9 +54,9 @@ const SWF_UNIT_NAME = "D9";
     // Make Sunday's day number 7
     d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay() || 7));
     // Get first day of year
-    var yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
+    const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
     // Calculate full weeks to nearest Thursday
-    var weekNo = Math.ceil(((d - yearStart) / 86400000 + 1) / 7);
+    const weekNo = Math.ceil(((d - yearStart) / 86400000 + 1) / 7);
     // Return array of year and week number
     return [d.getUTCFullYear(), weekNo];
   }
@@ -44,23 +73,11 @@ const SWF_UNIT_NAME = "D9";
     }, 200);
   }
 
-  let panel = $("<div>")
+  let panel = $("<div class='pwt-container'>")
     .attr("id", "pwt-panel")
-    .css("position", "absolute")
-    .css("left", "8px")
-    .css("top", "264px")
-    .css("width", "64px")
-    .css("height", "128px")
-    .css("border", "solid 2px black")
-    .css("background-color", "white")
-    .css("text-align", "center")
     .appendTo("body");
 
-  $("<span>")
-    .text("Tools")
-    .css("display", "block")
-    .css("margin-bottom", "8px")
-    .appendTo(panel);
+  $("<span>").text("Tools").appendTo(panel);
 
   let button = $("<button>")
     .html("Aktuální SA")
