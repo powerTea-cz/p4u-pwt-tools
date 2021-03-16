@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         +4U Tools
-// @namespace    https://github.com/powerTea-cz/p4u-pwt-tools
+// @homepage     https://github.com/powerTea-cz/p4u-pwt-tools
 // @version      0.1
 // @description  Tools and shortcuts for +4U
 // @author       You
