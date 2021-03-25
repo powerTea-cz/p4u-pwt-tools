@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         p4u-pwt-tools
 // @description  Tools for +4U made by powerTea
-// @version      1.0.0
+// @version      1.1.0
 // @namespace    https://uuos9.plus4u.net/
 // @homepage     https://github.com/powerTea-cz/p4u-pwt-tools
 // @author       powerTea-cz
