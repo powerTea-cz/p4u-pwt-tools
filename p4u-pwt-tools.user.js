@@ -73,16 +73,25 @@ const SWF_UNIT_NAME = "D9";
     }, 200);
   }
 
+  function getTsr() {
+    document.getElementById("system-menu-icon-link").click();
+    setTimeout(function () {
+      document.getElementById("quickFindInput").value = `UNI-BT:SWF.D/TSR`;
+      document.getElementById("quickfindLink").click();
+    }, 200);
+  }
+
+  if (self !== top) return;
+
   let panel = $("<div class='pwt-container'>")
     .attr("id", "pwt-panel")
     .appendTo("body");
 
   $("<span>").text("Tools").appendTo(panel);
 
-  let button = $("<button>")
-    .html("Aktuální SA")
-    .click(getCurrentSA)
-    .appendTo(panel);
+  $("<button>").html("Aktuální SA").click(getCurrentSA).appendTo(panel);
+
+  $("<button>").html("TSR").click(getTsr).appendTo(panel);
 
   $("body").append(panel);
 })();
