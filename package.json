@@ -1,0 +1,36 @@
+{
+  "name": "p4u-pwt-tools",
+  "version": "1.0.0",
+  "description": "Set of tampermonkey user scripts",
+  "main": "ivan2adam.user.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/powerTea-cz/p4u-pwt-tools.git"
+  },
+  "scripts": {
+    "lint": "npx eslint",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "npx prettier src test --check",
+    "prettier:fix": "npm run prettier -- --write",
+    "format": "npm run prettier:fix && npm run lint:fix"
+  },
+  "author": "powerTea-cz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/powerTea-cz/p4u-pwt-tools/issues"
+  },
+  "homepage": "https://github.com/powerTea-cz/p4u-pwt-tools#readme",
+  "devDependencies": {
+    "@eslint/css": "^0.9.0",
+    "@eslint/js": "^9.30.1",
+    "@eslint/json": "^0.12.0",
+    "@eslint/markdown": "^6.6.0",
+    "eslint": "^9.30.1",
+    "eslint-config-prettier": "^10.1.5",
+    "globals": "^16.3.0",
+    "prettier": "^3.6.2"
+  },
+  "dependencies": {
+    "@types/tampermonkey": "^5.0.4"
+  }
+}

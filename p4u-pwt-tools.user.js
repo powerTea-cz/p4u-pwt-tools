@@ -12,7 +12,7 @@
 // @run-at       document-idle
 // ==/UserScript==
 
-/* globals $ */
+/* globals $, GM_addStyle */
 
 GM_addStyle(`
 div.pwt-container {
@@ -67,9 +67,8 @@ const SWF_UNIT_NAME = "D9";
     let currentWeek = getWeekNumber(new Date());
     console.log("SA for week", currentWeek);
     setTimeout(function () {
-      document.getElementById(
-        "quickFindInput"
-      ).value = `UNI-BT:SWF.${SWF_UNIT_NAME}/SA${currentWeek[0]}${currentWeek[1]}`;
+      document.getElementById("quickFindInput").value =
+        `UNI-BT:SWF.${SWF_UNIT_NAME}/SA${currentWeek[0]}${currentWeek[1]}`;
       document.getElementById("quickfindLink").click();
     }, 200);
   }
